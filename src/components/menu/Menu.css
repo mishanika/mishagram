@@ -7,6 +7,11 @@
     color: #fff;
     letter-spacing: 0.9px;
 }
+.disableSelection{
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 .logo{
     padding: 40px 25px;
     cursor: pointer;
@@ -51,10 +56,10 @@
 }
 .navigation span{
     font-size: 1.5rem;
-    width: 100%;
+    flex-grow: 1;
 }
-.navigation svg{
-    font-size: 2.2rem;
+.navigation svg {
+    transform: scale(1);
 }
 .moreSection span{
     font-size: 1.6rem;
@@ -64,6 +69,10 @@
     display: flex;
     gap: 15px;
     align-items: center;
+}
+.moreSection>div:hover>svg{
+    transform: scale(1.05);
+    transition: all ease 0.2s;
 }
 .donikghoul{
     width: 25px;
