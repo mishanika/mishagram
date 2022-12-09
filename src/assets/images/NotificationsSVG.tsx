@@ -1,8 +1,5 @@
 import React from "react";
-
-export interface IIconOrios extends React.SVGProps<SVGSVGElement> {
-  isActive: boolean;
-}
+import { IIconOrios } from "../../types/types";
 
 const NotificationsSVG = ({ isActive }: IIconOrios) => {
   if (isActive) {
