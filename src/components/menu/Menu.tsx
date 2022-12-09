@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Menu.css";
 import * as texts from "../../constants/texts";
 import donikghoul from "../../assets/images/png/donikghoul.png";
@@ -55,6 +55,18 @@ const Menu = () => {
     });
     setActive({ ...tempActiveTab });
   };
+  useEffect(() => {
+    const profilePicture = document.querySelector(
+      ".profilePicture"
+    ) as HTMLBaseElement;
+    if (activateTab.profile) {
+      profilePicture.style.border = "2px solid white";
+      profilePicture.style.width = "22px";
+      profilePicture.style.height = "22px";
+    } else {
+      profilePicture.style.border = "none";
+    }
+  }, [activateTab]);
 
   return (
     <div className="menu disableSelection">
@@ -97,15 +109,15 @@ const Menu = () => {
           <span>{texts.text.Create}</span>
         </div>
 
-        <div className="profile">
-          <img src={donikghoul} alt="profile" className="donikghoul" />
+        <div className="profile" onClick={activeTab}>
+          <img src={donikghoul} alt="profile" className="profilePicture" />
           <span>{texts.text.Profile}</span>
         </div>
       </div>
 
       <div className="moreSection">
-        <div className="more">
-          <MoreSVG />
+        <div className="more" onClick={activeTab}>
+          <MoreSVG isActive={activateTab.more} />
           <span>{texts.text.More}</span>
         </div>
       </div>

@@ -30,8 +30,9 @@
     align-items: flex-end;
     padding: 0 0 40px 25px;
     box-sizing: border-box;
+}
+.more{
     cursor: pointer;
-    
 }
 
 .navigation>div{
@@ -74,8 +75,10 @@
     transform: scale(1.05);
     transition: all ease 0.2s;
 }
-.donikghoul{
-    width: 25px;
-    height: 25px;
+.profilePicture{
+    width: 24px;
+    height: 24px;
     border-radius: 100%;
+    border: none;
+    box-sizing: border-box;
 }

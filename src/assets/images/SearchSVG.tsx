@@ -1,38 +1,45 @@
 import React from "react";
 
-const SearchSVG = (props: any) => {
-  return props.isActive ? (
-    <svg
-      aria-label="Search"
-      className="_ab6-"
-      color="#fafafa"
-      fill="#fafafa"
-      height="24"
-      role="img"
-      viewBox="0 0 24 24"
-      width="24"
-    >
-      <path
-        d="M18.5 10.5a8 8 0 1 1-8-8 8 8 0 0 1 8 8Z"
-        fill="none"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="3"
-      ></path>
-      <line
-        fill="none"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="3"
-        x1="16.511"
-        x2="21.643"
-        y1="16.511"
-        y2="21.643"
-      ></line>
-    </svg>
-  ) : (
+export interface IIconOrios extends React.SVGProps<SVGSVGElement> {
+  isActive: boolean;
+}
+
+const SearchSVG = ({ isActive }: IIconOrios) => {
+  if (isActive) {
+    return (
+      <svg
+        aria-label="Search"
+        className="_ab6-"
+        color="#fafafa"
+        fill="#fafafa"
+        height="24"
+        role="img"
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <path
+          d="M18.5 10.5a8 8 0 1 1-8-8 8 8 0 0 1 8 8Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="3"
+        ></path>
+        <line
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="3"
+          x1="16.511"
+          x2="21.643"
+          y1="16.511"
+          y2="21.643"
+        ></line>
+      </svg>
+    );
+  }
+  return (
     <svg
       aria-label="Search"
       className="_ab6-"
