@@ -1,11 +1,11 @@
-export const text = { 
-    Home: "Home", 
-    Search: "Search", 
-    Explore: "Explore",
-    Reels: "Reels", 
-    Messages: "Messages", 
-    Notifications: "Notifications", 
-    Create: "Create", 
-    Profile: "Profile",
-    More: "More"
-} as const;
+export const texts = { 
+    home: "Home", 
+    search: "Search", 
+    explore: "Explore",
+    reels: "Reels", 
+    messages: "Messages", 
+    notifications: "Notifications", 
+    create: "Create", 
+    profile: "Profile",
+    more: "More"
+};

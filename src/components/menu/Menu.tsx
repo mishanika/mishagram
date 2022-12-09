@@ -1,29 +1,17 @@
 import React, { useState, useEffect } from "react";
 import "./Menu.css";
-import * as texts from "../../constants/texts";
-import donikghoul from "../../assets/images/png/donikghoul.png";
-import MishagramSVG from "../../assets/images/MishagramSVG";
-import HomeSVG from "../../assets/images/HomeSVG";
-import SearchSVG from "../../assets/images/SearchSVG";
-import ExploreSVG from "../../assets/images/ExploreSVG";
-import ReelsSVG from "../../assets/images/ReelsSVG";
-import MessengerSVG from "../../assets/images/MessengerSVG";
-import NotificationsSVG from "../../assets/images/NotificationsSVG";
-import NewPostSVG from "../../assets/images/NewPostSVG";
-import MoreSVG from "../../assets/images/MoreSVG";
-
-interface MenuStates {
-  logo: boolean;
-  home: boolean;
-  search: boolean;
-  explore: boolean;
-  reels: boolean;
-  messenger: boolean;
-  notifications: boolean;
-  newPost: boolean;
-  profile: boolean;
-  more: boolean;
-}
+import { texts } from "../../constants/texts";
+import { MenuStates } from "./types/index";
+import donikghoul from "../../assets/png/donikghoul.png";
+import MishagramSVG from "../../assets/svg/MishagramSVG";
+import HomeSVG from "../../assets/svg/HomeSVG";
+import SearchSVG from "../../assets/svg/SearchSVG";
+import ExploreSVG from "../../assets/svg/ExploreSVG";
+import ReelsSVG from "../../assets/svg/ReelsSVG";
+import MessengerSVG from "../../assets/svg/MessengerSVG";
+import NotificationsSVG from "../../assets/svg/NotificationsSVG";
+import NewPostSVG from "../../assets/svg/NewPostSVG";
+import MoreSVG from "../../assets/svg/MoreSVG";
 
 const Menu = () => {
   const [activateTab, setActive] = useState<MenuStates>({
@@ -43,7 +31,6 @@ const Menu = () => {
     const tar = activateTab.hasOwnProperty(e.target.classList[0])
       ? e.target.classList[0]
       : e.target.parentNode.closest("div").classList[0];
-    console.log(tar);
     const keys = Object.keys(activateTab);
     const tempActiveTab = activateTab;
     keys.forEach((key) => {
@@ -76,49 +63,49 @@ const Menu = () => {
       <div className="navigation">
         <div className="home" onClick={activeTab}>
           <HomeSVG isActive={activateTab.home} />
-          <span>{texts.text.Home}</span>
+          <span>{texts.home}</span>
         </div>
 
         <div className="search" onClick={activeTab}>
           <SearchSVG isActive={activateTab.search} />
-          <span>{texts.text.Search}</span>
+          <span>{texts.search}</span>
         </div>
 
         <div className="explore" onClick={activeTab}>
           <ExploreSVG isActive={activateTab.explore} />
-          <span>{texts.text.Explore}</span>
+          <span>{texts.explore}</span>
         </div>
 
         <div className="reels" onClick={activeTab}>
           <ReelsSVG isActive={activateTab.reels} />
-          <span>{texts.text.Reels}</span>
+          <span>{texts.reels}</span>
         </div>
 
         <div className="messenger" onClick={activeTab}>
           <MessengerSVG isActive={activateTab.messenger} />
-          <span>{texts.text.Messages}</span>
+          <span>{texts.messages}</span>
         </div>
 
         <div className="notifications" onClick={activeTab}>
           <NotificationsSVG isActive={activateTab.notifications} />
-          <span>{texts.text.Notifications}</span>
+          <span>{texts.notifications}</span>
         </div>
 
         <div className="newPost" onClick={activeTab}>
           <NewPostSVG isActive={activateTab.newPost} />
-          <span>{texts.text.Create}</span>
+          <span>{texts.create}</span>
         </div>
 
         <div className="profile" onClick={activeTab}>
           <img src={donikghoul} alt="profile" className="profilePicture" />
-          <span>{texts.text.Profile}</span>
+          <span>{texts.profile}</span>
         </div>
       </div>
 
       <div className="moreSection">
         <div className="more" onClick={activeTab}>
           <MoreSVG isActive={activateTab.more} />
-          <span>{texts.text.More}</span>
+          <span>{texts.more}</span>
         </div>
       </div>
     </div>
