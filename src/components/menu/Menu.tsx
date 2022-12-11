@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Outlet, Link } from "react-router-dom";
 import "./Menu.css";
 import { texts } from "../../constants/texts";
 import { MenuStates } from "./types/index";
@@ -56,59 +57,79 @@ const Menu = () => {
   }, [activateTab]);
 
   return (
-    <div className="menu disableSelection">
-      <div className="logo">
-        <MishagramSVG isActive={activateTab.logo} />
+    <>
+      <div className="menu disableSelection">
+        <Link to="/">
+          <div className="logo">
+            <MishagramSVG isActive={activateTab.logo} />
+          </div>
+        </Link>
+        <div className="navigation">
+          <Link to="/">
+            <div className="home" onClick={activeTab}>
+              <HomeSVG isActive={activateTab.home} />
+              <span>{texts.home}</span>
+            </div>
+          </Link>
+
+          <Link to="#">
+            <div className="search" onClick={activeTab}>
+              <SearchSVG isActive={activateTab.search} />
+              <span>{texts.search}</span>
+            </div>
+          </Link>
+
+          <Link to="/explore">
+            <div className="explore" onClick={activeTab}>
+              <ExploreSVG isActive={activateTab.explore} />
+              <span>{texts.explore}</span>
+            </div>
+          </Link>
+
+          <Link to="/reels">
+            <div className="reels" onClick={activeTab}>
+              <ReelsSVG isActive={activateTab.reels} />
+              <span>{texts.reels}</span>
+            </div>
+          </Link>
+
+          <Link to="/direct">
+            <div className="messenger" onClick={activeTab}>
+              <MessengerSVG isActive={activateTab.messenger} />
+              <span>{texts.messages}</span>
+            </div>
+          </Link>
+
+          <Link to="#">
+            <div className="notifications" onClick={activeTab}>
+              <NotificationsSVG isActive={activateTab.notifications} />
+              <span>{texts.notifications}</span>
+            </div>
+          </Link>
+
+          <Link to="#">
+            <div className="newPost" onClick={activeTab}>
+              <NewPostSVG isActive={activateTab.newPost} />
+              <span>{texts.create}</span>
+            </div>
+          </Link>
+          <Link to="/profile">
+            <div className="profile" onClick={activeTab}>
+              <img src={donikghoul} alt="profile" className="profilePicture" />
+              <span>{texts.profile}</span>
+            </div>
+          </Link>
+        </div>
+
+        <div className="moreSection">
+          <div className="more" onClick={activeTab}>
+            <MoreSVG isActive={activateTab.more} />
+            <span>{texts.more}</span>
+          </div>
+        </div>
       </div>
-      <div className="navigation">
-        <div className="home" onClick={activeTab}>
-          <HomeSVG isActive={activateTab.home} />
-          <span>{texts.home}</span>
-        </div>
-
-        <div className="search" onClick={activeTab}>
-          <SearchSVG isActive={activateTab.search} />
-          <span>{texts.search}</span>
-        </div>
-
-        <div className="explore" onClick={activeTab}>
-          <ExploreSVG isActive={activateTab.explore} />
-          <span>{texts.explore}</span>
-        </div>
-
-        <div className="reels" onClick={activeTab}>
-          <ReelsSVG isActive={activateTab.reels} />
-          <span>{texts.reels}</span>
-        </div>
-
-        <div className="messenger" onClick={activeTab}>
-          <MessengerSVG isActive={activateTab.messenger} />
-          <span>{texts.messages}</span>
-        </div>
-
-        <div className="notifications" onClick={activeTab}>
-          <NotificationsSVG isActive={activateTab.notifications} />
-          <span>{texts.notifications}</span>
-        </div>
-
-        <div className="newPost" onClick={activeTab}>
-          <NewPostSVG isActive={activateTab.newPost} />
-          <span>{texts.create}</span>
-        </div>
-
-        <div className="profile" onClick={activeTab}>
-          <img src={donikghoul} alt="profile" className="profilePicture" />
-          <span>{texts.profile}</span>
-        </div>
-      </div>
-
-      <div className="moreSection">
-        <div className="more" onClick={activeTab}>
-          <MoreSVG isActive={activateTab.more} />
-          <span>{texts.more}</span>
-        </div>
-      </div>
-    </div>
+      <Outlet />
+    </>
   );
 };
 

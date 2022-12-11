@@ -1,3 +1,8 @@
+a{
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+}
 .menu{
     width: 350px;
     height: 100%;
@@ -21,7 +26,7 @@
     flex-grow: 6;
     display: flex;
     flex-direction: column;
-     gap: 20px; 
+    gap: 10px; 
     padding: 0 25px 0 15px;
 }
 .moreSection{
@@ -35,7 +40,7 @@
     cursor: pointer;
 }
 
-.navigation>div{
+.navigation>a>div{
     display: flex;
     gap: 15px;
     align-items: center;
@@ -43,15 +48,15 @@
     padding: 10px 10px;
     border-radius: 20px;
 }
-.navigation>div:hover{
+.navigation>a>div:hover{
     background: #131313;
     transition: all ease 0.3s;
 }
-.navigation>div:hover>svg{
+.navigation>a>div:hover>svg{
     transform: scale(1.1);
     transition: all ease 0.3s;
 }
-.navigation>div:hover>img{
+.navigation>a>div:hover>img{
     transform: scale(1.1);
     transition: all ease 0.3s;
 }
