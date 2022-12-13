@@ -1,5 +1,5 @@
-import React from "react";
-import "./App.css";
+import React from 'react';
+import './App.css';
 import Menu from "./components/menu/Menu";
 import Main from "./components/main/Main";
 
