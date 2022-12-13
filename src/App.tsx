@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import Menu from "./components/menu/Menu";
-import Main from "./components/main/Main";
+import Menu from './components/menu/Menu';
+import Main from './components/main/Main';
 
 const App = () => {
   return (
