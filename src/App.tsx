@@ -1,24 +1,19 @@
 import React from "react";
 import "./App.css";
-import Menu from "./components/menu/Menu";
-import Main from "./components/main/Main";
-import Explore from "./components/explore/Explore";
-import Reels from "./components/reels/Reels";
-import Direct from "./components/direct/Direct";
-import Profile from "./components/profile/Profile";
+import { routes } from "./containers/navigation/routes";
+import Menu from "./containers/menu/Menu";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
+  const routeComponents = routes.map(({ path, component }, key) => (
+    <Route path={path} element={component} key={key} />
+  ));
   return (
     <BrowserRouter>
       <div className="App">
         <Routes>
           <Route path="/" element={<Menu />}>
-            <Route index element={<Main />} />
-            <Route path="explore" element={<Explore />} />
-            <Route path="reels" element={<Reels />} />
-            <Route path="direct" element={<Direct />} />
-            <Route path="profile" element={<Profile />} />
+            {routeComponents}
           </Route>
         </Routes>
       </div>

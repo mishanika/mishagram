@@ -1,0 +1,29 @@
+import Menu from "../menu/Menu";
+import Main from "../main/Main";
+import Explore from "../explore/Explore";
+import Reels from "../reels/Reels";
+import Direct from "../direct/Direct";
+import Profile from "../profile/Profile";
+
+export const routes = [
+  {
+    path: "/",
+    component: <Main />,
+  },
+  {
+    path: "/explore",
+    component: <Explore />,
+  },
+  {
+    path: "/reels",
+    component: <Reels />,
+  },
+  {
+    path: "/direct",
+    component: <Direct />,
+  },
+  {
+    path: "/profile",
+    component: <Profile />,
+  },
+];
