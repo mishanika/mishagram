@@ -1,23 +1,13 @@
 import React from "react";
 import "./App.css";
-import { routes } from "./containers/navigation/routes";
-import Menu from "./containers/menu/Menu";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Layout } from "./containers/layout";
+import { Navigation } from "./containers/navigation";
 
 const App = () => {
-  const routeComponents = routes.map(({ path, component }, key) => (
-    <Route path={path} element={component} key={key} />
-  ));
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<Menu />}>
-            {routeComponents}
-          </Route>
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <Layout>
+      <Navigation />
+    </Layout>
   );
 };
 

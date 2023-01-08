@@ -1,11 +1,11 @@
-import Menu from "../menu/Menu";
 import Main from "../main/Main";
 import Explore from "../explore/Explore";
 import Reels from "../reels/Reels";
 import Direct from "../direct/Direct";
 import Profile from "../profile/Profile";
+import { IRoute } from "./types";
 
-export const routes = [
+export const routes: IRoute[] = [
   {
     path: "/",
     component: <Main />,
