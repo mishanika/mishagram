@@ -1,7 +1,7 @@
-import React from "react";
-import "./App.css";
-import { Layout } from "./containers/layout";
-import { Navigation } from "./containers/navigation";
+import React from 'react';
+import './App.css';
+import { Layout } from './containers/layout';
+import { Navigation } from './containers/navigation';
 
 const App = () => {
   return (
