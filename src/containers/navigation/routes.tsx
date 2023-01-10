@@ -1,29 +1,29 @@
-import Main from "../main/Main";
-import Explore from "../explore/Explore";
-import Reels from "../reels/Reels";
-import Direct from "../direct/Direct";
-import Profile from "../profile/Profile";
-import { IRoute } from "./types";
+import Main from '../main/Main';
+import Explore from '../explore/Explore';
+import Reels from '../reels/Reels';
+import Direct from '../direct/Direct';
+import Profile from '../profile/Profile';
+import { IRoute } from './types';
 
 export const routes: IRoute[] = [
   {
-    path: "/",
+    path: '/',
     component: <Main />,
   },
   {
-    path: "/explore",
+    path: '/explore',
     component: <Explore />,
   },
   {
-    path: "/reels",
+    path: '/reels',
     component: <Reels />,
   },
   {
-    path: "/direct",
+    path: '/direct',
     component: <Direct />,
   },
   {
-    path: "/profile",
+    path: '/profile',
     component: <Profile />,
   },
 ];

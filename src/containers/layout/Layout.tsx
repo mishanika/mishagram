@@ -1,5 +1,5 @@
-import React, { PropsWithChildren } from "react";
-import Menu from "../menu/Menu";
+import React, { PropsWithChildren } from 'react';
+import Menu from '../menu/Menu';
 
 const Layout = ({ children }: PropsWithChildren) => {
   return (
