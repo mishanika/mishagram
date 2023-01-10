@@ -1,7 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { useAppSelector } from '../../hooks/hooks';
+import { selectName } from '../../redux/reducers/app.slice';
 
 const Direct = () => {
-  return <h1>Page not found</h1>;
+  const name = useAppSelector(selectName);
+  return (
+    <div>
+      <div>{name}</div>
+    </div>
+  );
 };
 
 export default Direct;
