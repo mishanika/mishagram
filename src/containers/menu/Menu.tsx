@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from "react";
-import { Outlet, Link } from "react-router-dom";
-import "./Menu.css";
-import { texts } from "../../constants/texts";
-import { MenuStates } from "./types/index";
-import donikghoul from "../../assets/png/donikghoul.png";
-import MishagramSVG from "../../assets/svg/MishagramSVG";
-import HomeSVG from "../../assets/svg/HomeSVG";
-import SearchSVG from "../../assets/svg/SearchSVG";
-import ExploreSVG from "../../assets/svg/ExploreSVG";
-import ReelsSVG from "../../assets/svg/ReelsSVG";
-import MessengerSVG from "../../assets/svg/MessengerSVG";
-import NotificationsSVG from "../../assets/svg/NotificationsSVG";
-import NewPostSVG from "../../assets/svg/NewPostSVG";
-import MoreSVG from "../../assets/svg/MoreSVG";
+import React, { useState, useEffect } from 'react';
+import { Outlet, Link } from 'react-router-dom';
+import './Menu.css';
+import { texts } from '../../constants/texts';
+import { MenuStates } from './types/index';
+import donikghoul from '../../assets/png/donikghoul.png';
+import MishagramSVG from '../../assets/svg/MishagramSVG';
+import HomeSVG from '../../assets/svg/HomeSVG';
+import SearchSVG from '../../assets/svg/SearchSVG';
+import ExploreSVG from '../../assets/svg/ExploreSVG';
+import ReelsSVG from '../../assets/svg/ReelsSVG';
+import MessengerSVG from '../../assets/svg/MessengerSVG';
+import NotificationsSVG from '../../assets/svg/NotificationsSVG';
+import NewPostSVG from '../../assets/svg/NewPostSVG';
+import MoreSVG from '../../assets/svg/MoreSVG';
 
 const Menu = () => {
   const [activateTab, setActive] = useState<MenuStates>({
@@ -31,7 +31,7 @@ const Menu = () => {
   const activeTab = (e: any) => {
     const tar = activateTab.hasOwnProperty(e.target.classList[0])
       ? e.target.classList[0]
-      : e.target.parentNode.closest("div").classList[0];
+      : e.target.parentNode.closest('div').classList[0];
     const keys = Object.keys(activateTab);
     const tempActiveTab = activateTab;
     keys.forEach((key) => {
@@ -44,15 +44,13 @@ const Menu = () => {
     setActive({ ...tempActiveTab });
   };
   useEffect(() => {
-    const profilePicture = document.querySelector(
-      ".profilePicture"
-    ) as HTMLBaseElement;
+    const profilePicture = document.querySelector('.profilePicture') as HTMLBaseElement;
     if (activateTab.profile) {
-      profilePicture.style.border = "2px solid white";
-      profilePicture.style.width = "22px";
-      profilePicture.style.height = "22px";
+      profilePicture.style.border = '2px solid white';
+      profilePicture.style.width = '22px';
+      profilePicture.style.height = '22px';
     } else {
-      profilePicture.style.border = "none";
+      profilePicture.style.border = 'none';
     }
   }, [activateTab]);
 
