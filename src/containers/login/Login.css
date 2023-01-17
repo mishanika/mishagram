@@ -9,6 +9,9 @@ input {
     color: #fff;
     text-indent: 10px;
 }
+a{
+    text-decoration: none;
+}
 .login-menu {
     flex-grow: 1;
     height: 100vh;
@@ -38,11 +41,13 @@ input {
 .screenshot{
     width: 250px;
     height: 539px;
-    display: none;
     margin: 26px 16px 0 0;
+    transition: 1s;
+    position: fixed;
+    opacity: 0;
 }
 .active{
-    display: block;
+    opacity: 1;
 }
 .footer{
     flex-grow: 3;
@@ -54,6 +59,7 @@ input {
     flex-direction: column;
     align-items: center;
     border-radius: 5px;
+    cursor: pointer;
 }
 .logo-form-wrapper{
     width: 100%;
@@ -63,7 +69,8 @@ input {
     flex-direction: column;
     align-items: center;
     border-radius: 5px;
-    border: 1px solid grey;
+    border: 1px solid;
+    border-color: rgb(147, 165, 176, 0.5);;
 }
 .logo-form-wrapper>div:first-child{
     width: fit-content;
@@ -85,7 +92,8 @@ input {
 .input-field{
     width: 268px;
     height: 40px;
-    border: 1px solid grey;
+    border: 1px solid;
+    border-color: rgba(147, 165, 176, 0.5);
     background: #121212;
     border-radius: 5px;
 }
@@ -94,6 +102,10 @@ input {
     height: 32px;
     background: #0068ac;
     border-radius: 8px;
+    color: rgb(147, 165, 176);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
     /* background: #0095f6; */
 }
 .or{
@@ -105,7 +117,7 @@ input {
 .or>span{
     display: block;
     margin: 0 20px;
-    color: grey;
+    color: rgb(147, 165, 176);;
     font-size: 12px;
 }
 .or::before {
@@ -113,7 +125,7 @@ input {
     width: 100%;
     display: block;
     height: 1px;
-    background: grey;
+    background: rgb(147, 165, 176);;
     opacity: 0.5;
 }
 .or::after {
@@ -121,7 +133,7 @@ input {
     display: block;
     width: 100%;
     height: 1px;
-    background: grey;
+    background: rgb(147, 165, 176);;
     opacity: 0.5;
 }
 .facebook-login{
@@ -130,6 +142,7 @@ input {
     font-size: 14px;
     color: #385185;
     font-weight: 500;
+    cursor: pointer;
 }
 .faceboor-icon{
     width: 16px;
@@ -138,6 +151,9 @@ input {
     background-size: cover;
     margin: 0 10px 0 0;
     background-color: #fff;
+}
+.forgot-pwd{
+    cursor: pointer;
 }
 .logo-form-wrapper>div:first-child>span {
     font-size: 12px;
@@ -148,32 +164,35 @@ input {
 .label-wrapper{
     display: flex;
     align-items: center;
+    margin: 10px;
 }
 .label-wrapper>label{
     font-size: 12px;
     line-height: 12px;
 }
-input[type=checkbox] {
-    visibility: hidden;
+
+.info {
+    position: relative;
+    left: -5px;
 }
-.info{
-    width: 13px;
-    height: 13px;
-    margin: 15px 10px 15px 0;
-    background: #000;
-    outline: 1px solid grey;
-}
+
 .registration{
     width: 350px;
     height: 63px;
     background: #000;
-    border: 1px solid grey;
+    border: 1px solid;
+    border-color: rgb(147, 165, 176, 0.5);
     margin: 10px 0;
     border-radius: 5px;
     font-size: 14px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.registration>span:last-child {
+    color: rgb(0, 129, 236);
+    font-weight: 600;
+    cursor: pointer;
 }
 .get-the-app{
     display: flex;
@@ -188,12 +207,37 @@ input[type=checkbox] {
 .get-the-app img:first-child{
     width: 134px;
     height: 40px;
+    cursor: pointer;
 }
 .get-the-app img:last-child {
     width: 111px;
     height: 40px;
+    cursor: pointer;
 }
 .get-the-app-img-wrapper{
     display: flex;
     gap: 10px;
+}
+.footer{
+    margin: auto;
+    font-size: 12px;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer-upper{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.footer-a{
+    color: rgb(147, 165, 176);
+}
+.footer-lower {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    color: rgb(147, 165, 176);
 }

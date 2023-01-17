@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import './Menu.css';
-import { texts } from '../../constants/texts';
+import { texts } from '../../constants/textsMenu';
 import { MenuStates } from './types/index';
 import donikghoul from '../../assets/png/donikghoul.png';
 import MishagramSVG from '../../assets/svg/MishagramSVG';
