@@ -78,7 +78,7 @@ a{
     flex-direction: column;
     align-items: center;
 }
-.logo{
+.logo-login{
     width: 171px;
     height: 51px;
     background: url("../../assets/png/LoginLogo.png");
@@ -154,12 +154,10 @@ a{
 }
 .forgot-pwd{
     cursor: pointer;
-}
-.logo-form-wrapper>div:first-child>span {
     font-size: 12px;
-    font-weight: 400;
-    display: block;
-    padding: 20px;
+        font-weight: 400;
+        display: block;
+        padding: 20px;
 }
 .label-wrapper{
     display: flex;
@@ -189,7 +187,7 @@ a{
     justify-content: center;
     align-items: center;
 }
-.registration>span:last-child {
+.registration>a>span {
     color: rgb(0, 129, 236);
     font-weight: 600;
     cursor: pointer;

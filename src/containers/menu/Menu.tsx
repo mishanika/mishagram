@@ -29,7 +29,7 @@ const Menu = () => {
   });
 
   const activeTab = (e: any) => {
-    const tar = activateTab.hasOwnProperty(e.target.classList[0])
+    const tar = Object.prototype.hasOwnProperty.call(activateTab, e.target.classList[0])
       ? e.target.classList[0]
       : e.target.parentNode.closest('div').classList[0];
     const keys = Object.keys(activateTab);

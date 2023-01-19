@@ -10,15 +10,24 @@ import googlePlay from '../../assets/png/googlePlay.png';
 import { IFooter } from './types';
 import { textsFooter } from '../../constants/textsLoginFooter';
 import { textsMain } from '../../constants/textsLoginMain';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
-  const renderFooter = ({ text }: IFooter) => (
-    <div className="footer-element">
+  const renderFooter = ({ text, url }: IFooter) => (
+    <div className="footer-element" onClick={() => window.open(url)}>
       <a href="#" className="footer-a">
         {text}
       </a>
     </div>
   );
+  const googlePlayRedirect = () => {
+    window.open('https://play.google.com/store/apps/details?id=com.instagram.android');
+  };
+  const microsoftRedirect = () => {
+    window.open(
+      'ms-windows-store://pdp/?productid=9nblggh5l9xt&referrer=appbadge&source=www.instagram.com&mode=mini&pos=0%2C0%2C3052%2C1966',
+    );
+  };
   useEffect(() => {
     const phoneBlock = document.querySelectorAll('.screenshot');
     let counter = 0 as keyof typeof phoneBlock as number;
@@ -44,7 +53,7 @@ const Login = () => {
         <div className="login-block">
           <div className="logo-form-wrapper">
             <div>
-              <div className="logo"></div>
+              <div className="logo-login"></div>
               <div className="form-wrapper">
                 <form action="" id="login-form" className="login-form">
                   <input
@@ -71,18 +80,22 @@ const Login = () => {
                 <div className="faceboor-icon"></div>
                 <span>{textsMain.logInWithFacebook}</span>
               </div>
-              <span className="forgot-pwd">{textsMain.forgottenYourPassword}</span>
+              <Link to="/forgot-pwd">
+                <span className="forgot-pwd">{textsMain.forgottenYourPassword}</span>
+              </Link>
             </div>
           </div>
           <div className="registration">
             <span>{textsMain.youHaveAnAccount}</span>&nbsp;
-            <span>{textsMain.signUp}</span>
+            <Link to="/reg">
+              <span>{textsMain.signUp}</span>
+            </Link>
           </div>
           <div className="get-the-app">
             <span>{textsMain.getTheApp}</span>
             <div className="get-the-app-img-wrapper">
-              <img src={googlePlay} alt="" />
-              <img src={microsoft} alt="" />
+              <img src={googlePlay} alt="" onClick={googlePlayRedirect} />
+              <img src={microsoft} alt="" onClick={microsoftRedirect} />
             </div>
           </div>
         </div>

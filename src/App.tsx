@@ -6,10 +6,10 @@ import Registration from './containers/login/Login';
 
 const App = () => {
   return (
-    // <Layout>
-    //   <Navigation />
-    // </Layout>
-    <Registration />
+    <Layout>
+      <Navigation />
+    </Layout>
+    //<Registration />
   );
 };
 
