@@ -27,7 +27,7 @@ const Menu = () => {
     profile: false,
     more: false,
   });
-
+  /* eslint-disable no-prototype-builtins */
   const activeTab = (e: any) => {
     const tar = activateTab.hasOwnProperty(e.target.classList[0]) // eslint-disable-line
       ? e.target.classList[0]
