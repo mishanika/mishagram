@@ -4,11 +4,8 @@ import { selectName } from '../../redux/reducers/app.slice';
 
 const Direct = () => {
   const name = useAppSelector(selectName);
-  return (
-    <div>
-      <div>{name}</div>
-    </div>
-  );
+
+  return <div>{name}</div>;
 };
 
 export default Direct;

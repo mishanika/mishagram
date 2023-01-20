@@ -14,6 +14,7 @@ export const appSlice = createSlice({
   initialState,
   reducers: {},
 });
+
 export const selectName = (state: RootState) => state.app.name;
 
 export default appSlice.reducer;
