@@ -20,9 +20,11 @@ const Login = () => {
       </a>
     </div>
   );
+
   const googlePlayRedirect = () => {
     window.open('https://play.google.com/store/apps/details?id=com.instagram.android');
   };
+
   const microsoftRedirect = () => {
     window.open(
       'ms-windows-store://pdp/?productid=9nblggh5l9xt&referrer=appbadge&source=www.instagram.com&mode=mini&pos=0%2C0%2C3052%2C1966',

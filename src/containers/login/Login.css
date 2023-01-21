@@ -239,3 +239,31 @@ a{
     gap: 15px;
     color: rgb(147, 165, 176);
 }
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    .phone-block{
+        display: none;
+    }
+    .footer-upper{
+        flex-wrap: wrap;
+        gap: 17px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .phone-block{
+        display: none;
+    }
+    .footer-upper{
+        flex-wrap: wrap;
+        gap: 17px;
+    }
+    .logo-form-wrapper{
+        border: none;
+        background-color: #121212;
+    }
+    .registration{
+        border: none;
+        background-color: #121212;
+    }
+}

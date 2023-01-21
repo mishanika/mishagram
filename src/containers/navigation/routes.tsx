@@ -3,7 +3,6 @@ import Explore from '../explore/Explore';
 import Reels from '../reels/Reels';
 import Direct from '../direct/Direct';
 import Profile from '../profile/Profile';
-//import Registration from '../login/Login';
 import Login from '../login/Login';
 import { IRoute } from './types';
 
