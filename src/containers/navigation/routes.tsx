@@ -3,6 +3,7 @@ import Explore from '../explore/Explore';
 import Reels from '../reels/Reels';
 import Direct from '../direct/Direct';
 import Profile from '../profile/Profile';
+import Login from '../login/Login';
 import { IRoute } from './types';
 
 export const routes: IRoute[] = [
@@ -25,5 +26,9 @@ export const routes: IRoute[] = [
   {
     path: '/profile',
     component: <Profile />,
+  },
+  {
+    path: '/login',
+    component: <Login />,
   },
 ];

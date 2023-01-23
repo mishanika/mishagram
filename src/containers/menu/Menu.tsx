@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import './Menu.css';
-import { texts } from '../../constants/texts';
+import { texts } from '../../constants/textsMenu';
 import { MenuStates } from './types/index';
 import donikghoul from '../../assets/png/donikghoul.png';
 import MishagramSVG from '../../assets/svg/MishagramSVG';
@@ -29,7 +29,7 @@ const Menu = () => {
   });
 
   const activeTab = (e: any) => {
-    const tar = activateTab.hasOwnProperty(e.target.classList[0])
+    const tar = Object.prototype.hasOwnProperty.call(activateTab, e.target.classList[0])
       ? e.target.classList[0]
       : e.target.parentNode.closest('div').classList[0];
     const keys = Object.keys(activateTab);
