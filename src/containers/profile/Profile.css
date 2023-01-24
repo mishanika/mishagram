@@ -1,0 +1,65 @@
+.profile-main-section{
+    width: 100%;
+    height: 100vh;
+    background: #121212;
+    color: #fff;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+.upper-part{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    margin: 25px 0 0 0;
+}
+.upper-part::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: rgb(147, 165, 176);
+    ;
+    opacity: 0.3;
+}
+.profile-wrapper{
+    display: flex;
+}
+.profile-photo{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 50px;
+}
+.profile-edition-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin: 0 50px;
+
+}
+.nickname-edit-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.nickname{
+    font-size: 20px;
+    font-weight: 400;
+}
+.edit{
+    padding: 7px 16px;
+    background: #fff;
+    color: #000;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+.followers-wrapper{
+    display: flex;
+    gap: 50px;
+    font-size: 16px;
+    font-weight: 400;
+}
