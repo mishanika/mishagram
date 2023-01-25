@@ -21,15 +21,18 @@ const Profile = () => {
               </div>
             </div>
             <div className="followers-wrapper">
-              <div className="posts">{texts.posts}</div>
-              <div className="folllowers">{texts.followers}</div>
-              <div className="following">{texts.following}</div>
+              <div className="posts">0 {texts.posts}</div>
+              <div className="folllowers">80 {texts.followers}</div>
+              <div className="following">110 {texts.following}</div>
             </div>
           </div>
         </div>
         <div className="highlights">
           <div className="highlight">
-            <div className="highlights-circle"></div>
+            <div className="highlights-circle">
+              <div className="plus-vertical"></div>
+              <div className="plus-horizontal"></div>
+            </div>
             <span className="highlights-text">{texts.new}</span>
           </div>
         </div>
