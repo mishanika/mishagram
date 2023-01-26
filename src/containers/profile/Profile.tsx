@@ -2,7 +2,12 @@ import React from 'react';
 import './Profile.css';
 import { texts } from '../../constants/textsProfile';
 import donikghoul from '../../assets/png/donikghoul.png';
+import icons from '../../assets/png/icons.png';
 import SettingsSVG from '../../assets/svg/SettingsSVG';
+import PlusSVG from '../../assets/svg/PlusSVG';
+import SavedSVG from '../../assets/svg/SavedSVG';
+import PostsSVG from '../../assets/svg/PostsSVG';
+import TaggedSVG from '../../assets/svg/TaggedSVG';
 
 const Profile = () => {
   return (
@@ -30,14 +35,35 @@ const Profile = () => {
         <div className="highlights">
           <div className="highlight">
             <div className="highlights-circle">
-              <div className="plus-vertical"></div>
-              <div className="plus-horizontal"></div>
+              <PlusSVG />
             </div>
             <span className="highlights-text">{texts.new}</span>
           </div>
         </div>
       </div>
-      <div className="lower-part"></div>
+      <div className="lower-part">
+        <div className="posts-saved-tagged">
+          <div className="posts-saved-tagged-inner">
+            <div className="posted-posts-upper">
+              <PostsSVG /> {texts.postS}
+            </div>
+            <div className="saved-upper">
+              <SavedSVG /> {texts.saved}
+            </div>
+            <div className="tagged-upper">
+              <TaggedSVG /> {texts.tagged}
+            </div>
+          </div>
+          <div className="posted-posts-lower">
+            <div className="share-photo"></div>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div className="saved-lower"></div>
+          <div className="tagged-lower"></div>
+        </div>
+      </div>
     </main>
   );
 };
