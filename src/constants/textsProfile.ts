@@ -10,4 +10,8 @@ export const texts = {
   sharePhotos: 'Share photos',
   whenYouShare: 'When you share photos, they will appear on your profile.',
   shareFirstPhoto: 'Share your first photo',
+  onlyYouCanSee: "Only you can see what you've saved",
+  newCollection: '+ New Collection',
+  photosOfYou: 'Photos of you',
+  whenPeopleTagYou: "When people tag you in photos, they'll appear here.",
 };

@@ -58,12 +58,19 @@
     border-radius: 10px;
     font-size: 13px;
     font-weight: 500;
+    cursor: pointer;
+}
+.settings{
+    cursor: pointer;
 }
 .followers-wrapper{
     display: flex;
     gap: 50px;
     font-size: 16px;
     font-weight: 400;
+}
+.followers-wrapper>div:not(.posts){
+    cursor: pointer;
 }
 .highlight{
     width: fit-content;
@@ -72,6 +79,7 @@
     justify-content: center;
     align-items: center;
     margin: 50px 25px;
+    cursor: pointer;
 }
 .highlight>span{
     margin: 10px;
@@ -90,13 +98,18 @@
 }
 .lower-part{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-grow: 1;
+    width: 900px;
 }
 .posts-saved-tagged{
     display: flex;
     align-items: center;
     flex-direction: column;
+    height: 100%;
+    width: 100%;
 }
 .posts-saved-tagged-inner{
     font-size: 13px;
@@ -111,6 +124,7 @@
     align-items: center;
     gap: 5px;
     padding: 20px 0 0 0;
+    cursor: pointer;
 }
 .share-photo{
     width: 62px;
@@ -118,7 +132,91 @@
     background: url("../../assets/png/icons.png");
     background-size: 440px 411px;
     background-position: -63px -288px;
-    margin: 50px;
+    margin: 75px 0 25px 0;
+    cursor: pointer;
     /* background-size: 440px 411px;
     background-position: -189px -288px; */
+}
+.posted-posts-lower{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.share-photo-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+}
+.share-photo-text span:first-child{
+    font-size: 30px;
+    font-weight: 900;
+}
+.share-photo-text span:last-child {
+    color: #0a84f6;
+    font-weight: 600;
+    cursor: pointer;
+}
+.share-photo-text span:last-child:hover {
+    color: #fff;
+}
+.saved-lower{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 0 0;
+    display: none;
+}
+.saved-lower>span:first-child{
+    color: #9b9f98;
+    font-size: 12px;
+}
+.saved-lower>span:last-child {
+    font-size: 14px;
+    color: #0a84f6;
+    cursor: pointer;
+}
+.saved-lower>span:last-child:hover{
+    color: #fff;
+}
+.saved-posts{
+    flex-grow: 1;
+}
+.tagged-lower {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+.photos-of-you {
+    width: 62px;
+    height: 62px;
+    background: url("../../assets/png/icons.png");
+    background-size: 440px 411px;
+    background-position: -189px -288px;
+    margin: 75px 0 25px 0;
+}
+.footer-profile{
+    font-size: 12px;
+    margin: 0 0 60px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: #9b9f98;
+}
+.footer-upper{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+}
+.footer-lower-profile{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.footer-a-profile{
+    color: #9b9f98;
 }

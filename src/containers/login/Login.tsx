@@ -103,7 +103,7 @@ const Login = () => {
         </div>
       </main>
 
-      <footer className="footer">
+      <footer className="footer-login">
         <div className="footer-upper">{textsFooter.map(renderFooter)}</div>
         <div className="footer-lower">
           <div className="language">{textsMain.language} (UK)</div>
