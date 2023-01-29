@@ -56,7 +56,8 @@ const Menu = () => {
 
   return (
     <>
-      <div className="menu disableSelection">
+      <div className="indent"></div>
+      <div className="menu">
         <Link to="/">
           <div className="logo">
             <MishagramSVG isActive={activateTab.logo} />
