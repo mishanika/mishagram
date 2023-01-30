@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Profile.css';
 import { texts } from '../../constants/textsProfile';
 import donikghoul from '../../assets/png/donikghoul.png';
@@ -10,15 +10,43 @@ import TaggedSVG from '../../assets/svg/TaggedSVG';
 import { IFooter } from '../login/types';
 import { textsFooter } from '../../constants/textsLoginFooter';
 import { textsMain } from '../../constants/textsLoginMain';
+import { TabStates } from './types';
 
 const Profile = () => {
   const renderFooter = ({ text, url }: IFooter) => (
-    <div className="footer-element" onClick={() => window.open(url)}>
+    <div className="footer-element" onClick={() => window.open(url)} key={url}>
       <a href="#" className="footer-a-profile">
         {text}
       </a>
     </div>
   );
+  const [activateTab, setActive] = useState<TabStates>({
+    lowerPart: 'posts',
+    upperPart: 'posts-upper',
+  });
+  const activeTab = (e: any) => {
+    const activateTabCopy = activateTab;
+    const upperTabDisable = document.querySelector(`.${activateTab.upperPart}`) as HTMLBaseElement;
+    const upperTabAnable = e.target.closest('div') as HTMLBaseElement;
+    const lowerTabDisable = document.querySelector(`.${activateTab.lowerPart}`) as HTMLBaseElement;
+    const lowerTabAnable = document.querySelector(`.${upperTabAnable.classList[0].split('-')[0]}`) as HTMLBaseElement;
+    const svgDisable = upperTabDisable.children[0] as HTMLBaseElement;
+    const svgAnable = upperTabAnable.children[0] as HTMLBaseElement;
+
+    upperTabDisable.style.color = '#737373';
+    upperTabDisable.style.borderTop = 'none';
+    upperTabAnable.style.color = '#fff';
+    upperTabAnable.style.borderTop = '1px solid #fff';
+    svgAnable.style.color = '#fff';
+    svgDisable.style.color = '#737373';
+    lowerTabDisable.style.display = 'none';
+    lowerTabAnable.style.display = 'flex';
+
+    activateTabCopy.lowerPart = lowerTabAnable.classList[0];
+    activateTabCopy.upperPart = upperTabAnable.classList.value;
+    setActive({ ...activateTabCopy });
+  };
+
   return (
     <main className="profile-main-section">
       <div className="upper-part">
@@ -35,7 +63,7 @@ const Profile = () => {
               </div>
             </div>
             <div className="followers-wrapper">
-              <div className="posts">0 {texts.posts}</div>
+              <div className="posts-amount">0 {texts.posts}</div>
               <div className="folllowers">80 {texts.followers}</div>
               <div className="following">110 {texts.following}</div>
             </div>
@@ -53,17 +81,17 @@ const Profile = () => {
       <div className="lower-part">
         <div className="posts-saved-tagged">
           <div className="posts-saved-tagged-inner">
-            <div className="posted-posts-upper">
+            <div className="posts-upper" onClick={activeTab}>
               <PostsSVG /> {texts.postS}
             </div>
-            <div className="saved-upper">
+            <div className="saved-upper" onClick={activeTab}>
               <SavedSVG /> {texts.saved}
             </div>
-            <div className="tagged-upper">
+            <div className="tagged-upper" onClick={activeTab}>
               <TaggedSVG /> {texts.tagged}
             </div>
           </div>
-          <div className="posted-posts-lower">
+          <div className="posts lower">
             <div className="share-photo"></div>
             <div className="share-photo-text">
               <span>{texts.sharePhotos}</span>
@@ -71,14 +99,14 @@ const Profile = () => {
               <span>{texts.shareFirstPhoto}</span>
             </div>
           </div>
-          <div className="saved-lower">
+          <div className="saved lower">
             <span>{texts.onlyYouCanSee}</span>
             <div className="saved-posts"></div>
             <span>{texts.newCollection}</span>
           </div>
-          <div className="tagged-lower">
+          <div className="tagged lower">
             <div className="photos-of-you"></div>
-            <div className="share-photo-text">
+            <div className="tag-you">
               <span>{texts.photosOfYou}</span>
               <span>{texts.whenPeopleTagYou}</span>
             </div>

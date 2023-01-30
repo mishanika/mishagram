@@ -118,7 +118,7 @@
     font-weight: 600;
     display: flex;
     gap: 75px;
-    color: rgb(115, 115, 115);
+    color: #8e8e8e;
 }
 .posts-saved-tagged-inner>div{
     display: flex;
@@ -126,6 +126,9 @@
     gap: 5px;
     padding: 20px 0 0 0;
     cursor: pointer;
+}
+.posts-upper{
+    color: #fff;
 }
 .share-photo{
     width: 62px;
@@ -138,11 +141,19 @@
     /* background-size: 440px 411px;
     background-position: -189px -288px; */
 }
-.posted-posts-lower{
+.posts{
     display: flex;
     flex-direction: column;
     align-items: center;
     
+}
+.saved{
+    display: none;
+}
+.tagged{
+    display: none;
+    flex-direction: column;
+    align-items: center;
 }
 .share-photo-text{
     display: flex;
@@ -163,32 +174,27 @@
 .share-photo-text span:last-child:hover {
     color: #fff;
 }
-.saved-lower{
+.saved {
     width: 100%;
-    display: flex;
     justify-content: center;
     margin: 50px 0 0 0;
-    display: none;
 }
-.saved-lower>span:first-child{
+.saved>span:first-child{
     color: #9b9f98;
     font-size: 12px;
 }
-.saved-lower>span:last-child {
+.saved>span:last-child {
     font-size: 14px;
     color: #0a84f6;
     cursor: pointer;
 }
-.saved-lower>span:last-child:hover{
+.saved>span:last-child:hover{
     color: #fff;
 }
 .saved-posts{
     flex-grow: 1;
 }
-.tagged-lower {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.tagged {
     display: none;
 }
 .photos-of-you {
@@ -199,6 +205,20 @@
     background-position: -189px -288px;
     margin: 75px 0 25px 0;
 }
+.tag-you{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+}
+.tag-you span:first-child {
+    font-size: 30px;
+    font-weight: 900;
+}
+.tag-you span:last-child {
+    font-weight: 600;
+}
 .footer-profile{
     font-size: 12px;
     margin: 100px 0 60px 0;
@@ -207,7 +227,7 @@
     justify-content: flex-end;
     flex-direction: column;
     gap: 15px;
-    color: #9b9f98;
+    color: #8e8e8e;
 }
 .footer-upper{
     display: flex;
@@ -221,5 +241,8 @@
     gap: 15px;
 }
 .footer-a-profile{
-    color: #9b9f98;
+    color: #8e8e8e;
+}
+.active{
+    display: flex;
 }
