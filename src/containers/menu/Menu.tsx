@@ -60,7 +60,7 @@ const Menu = () => {
       <div className="menu">
         <Link to="/">
           <div className="logo">
-            <MishagramSVG isActive={activateTab.logo} />
+            <MishagramSVG />
           </div>
         </Link>
         <div className="navigation">

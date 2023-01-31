@@ -1,8 +1,7 @@
 import React from 'react';
-import { IIconOrios } from '../../types/types';
 
-const Mishagram = ({ isActive }: IIconOrios) => {
-  if (isActive) {
+const Mishagram = () => {
+  if (window.screen.width < 1200) {
     return (
       <svg
         aria-label="Instagram"
