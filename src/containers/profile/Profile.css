@@ -243,6 +243,136 @@
 .footer-a-profile{
     color: #8e8e8e;
 }
-.active{
-    display: flex;
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+    .upper-part {
+        width: 700px;
+        /* margin: 25px 0 0 0; */
+    }
+    .lower-part {
+        
+        width: 700px;
+    }
+}
+@media screen and (min-width: 501px) and (max-width: 768px) {
+    .upper-part {
+        width: 500px;
+        /* margin: 25px 0 0 0; */
+    }
+
+    .lower-part {
+
+        width: 500px;
+    }
+
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+        margin: 0 25px;
+    }
+
+    .profile-edition-wrapper {
+        margin: 0 25px;
+
+    }
+
+    .followers-wrapper {
+        gap: 25px;
+        font-size: 14px;
+    }
+
+    .highlight {
+        margin: 50px 25px;
+    }
+
+    .highlight>span {
+        margin: 10px;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .highlights-circle {
+        width: 60px;
+        height: 60px;
+    }
+ 
+    .highlights-circle>svg{
+        width: 30px;
+        height: 30px;
+    }
+    .saved {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .saved-posts{
+        order: 1;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .upper-part {
+        width: 300px;
+        /* margin: 25px 0 0 0; */
+    }
+
+    .lower-part {
+
+        width: 300px;
+    }
+
+    .nickname{
+        font-size: 16px;
+    }
+    .profile-photo {
+        width: 75px;
+        height: 75px;
+        margin: 0 25px 0 0;
+    }
+
+    .profile-edition-wrapper {
+        margin: 0;
+
+    }
+
+    .followers-wrapper {
+        gap: 25px;
+        font-size: 14px;
+    }
+
+    .highlight {
+        margin: 25px 25px;
+    }
+
+    .highlight>span {
+        margin: 10px;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .highlights-circle {
+        width: 60px;
+        height: 60px;
+    }
+
+    .highlights-circle>svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .posts-saved-tagged-inner {
+        gap: 25px;
+    }
+
+    .lower{
+        text-align: center;
+    }
+    .saved {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .saved-posts {
+        order: 1;
+    }
 }

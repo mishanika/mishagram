@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './Profile.css';
 import { texts } from '../../constants/textsProfile';
 import donikghoul from '../../assets/png/donikghoul.png';
