@@ -14,4 +14,7 @@ export const texts = {
   newCollection: '+ New Collection',
   photosOfYou: 'Photos of you',
   whenPeopleTagYou: "When people tag you in photos, they'll appear here.",
+  save: 'Save',
+  savePhotosAndVideos:
+    "Save photos and videos that you want to see again. No one is notified, and only you can see what you've saved.",
 };

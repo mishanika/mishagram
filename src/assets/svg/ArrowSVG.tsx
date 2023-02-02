@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ArrowDownSVG = () => {
+const ArrowSVG = () => {
   return (
     <svg
       aria-label="Down Chevron Icon"
@@ -15,4 +15,4 @@ const ArrowDownSVG = () => {
   );
 };
 
-export default ArrowDownSVG;
+export default ArrowSVG;

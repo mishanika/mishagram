@@ -12,6 +12,8 @@ import { textsFooter } from '../../constants/textsLoginFooter';
 import { textsMain } from '../../constants/textsLoginMain';
 import { TabStates } from './types';
 import DiscoverPeopleSVG from '../../assets/svg/DiscoverPeopleSVG';
+import ArrowSVG from '../../assets/svg/ArrowSVG';
+import FeedSVG from '../../assets/svg/FeedSVG';
 
 const Profile = () => {
   const renderFooter = ({ text, url }: IFooter) => (
@@ -33,13 +35,20 @@ const Profile = () => {
     const lowerTabAnable = document.querySelector(`.${upperTabAnable.classList[0].split('-')[0]}`) as HTMLBaseElement;
     const svgDisable = upperTabDisable.children[0] as HTMLBaseElement;
     const svgAnable = upperTabAnable.children[0] as HTMLBaseElement;
-
-    upperTabDisable.style.color = '#737373';
-    upperTabDisable.style.borderTop = 'none';
-    upperTabAnable.style.color = '#fff';
-    upperTabAnable.style.borderTop = '1px solid #fff';
-    svgAnable.style.color = '#fff';
-    svgDisable.style.color = '#737373';
+    if (window.screen.availWidth > 767) {
+      upperTabDisable.style.color = '#737373';
+      upperTabDisable.style.borderTop = 'none';
+      upperTabAnable.style.color = '#fff';
+      upperTabAnable.style.borderTop = '1px solid #fff';
+      svgAnable.style.color = '#fff';
+      svgDisable.style.color = '#737373';
+    } else {
+      upperTabDisable.style.color = '#737373';
+      upperTabDisable.style.borderTop = 'none';
+      upperTabAnable.style.color = '#0a84f6';
+      svgAnable.style.color = '#0a84f6';
+      svgDisable.style.color = '#737373';
+    }
     lowerTabDisable.style.display = 'none';
     lowerTabAnable.style.display = 'flex';
 
@@ -54,7 +63,9 @@ const Profile = () => {
         <div className="settings">
           <SettingsSVG />
         </div>
-        <div className="nickname-header">mishanika2</div>
+        <div className="nickname-header">
+          mishanika2 <ArrowSVG />
+        </div>
         <DiscoverPeopleSVG />
       </header>
       <div className="upper-part">
@@ -75,6 +86,7 @@ const Profile = () => {
               <div className="folllowers">80 {texts.followers}</div>
               <div className="following">110 {texts.following}</div>
             </div>
+            <div className="description"></div>
           </div>
         </div>
         <div className="highlights">
@@ -86,31 +98,78 @@ const Profile = () => {
           </div>
         </div>
       </div>
+      <div className="upper-part-mobile">
+        <div className="profile-wrapper-mobile">
+          <div className="profile-photo-wrapper-mobile">
+            <img src={donikghoul} alt="" className="profile-photo-mobile" />
+          </div>
+          <div className="profile-edition-wrapper-mobile">
+            <div className="nickname">mishanika2</div>
+            <div className="edit">{texts.edit}</div>
+          </div>
+        </div>
+        <div className="description">qwerty</div>
+        <div className="followers-wrapper-mobile">
+          <div className="posts-amount">
+            0 <span>{texts.posts}</span>
+          </div>
+          <div className="folllowers">
+            80 <span>{texts.followers}</span>
+          </div>
+          <div className="following">
+            110 <span>{texts.following}</span>
+          </div>
+        </div>
+      </div>
       <div className="lower-part">
         <div className="posts-saved-tagged">
           <div className="posts-saved-tagged-inner">
             <div className="posts-upper" onClick={activeTab}>
-              <PostsSVG /> {texts.postS}
+              <PostsSVG /> <span>{texts.postS}</span>
+            </div>
+            <div className="feed-upper" onClick={activeTab}>
+              <FeedSVG />
             </div>
             <div className="saved-upper" onClick={activeTab}>
-              <SavedSVG /> {texts.saved}
+              <SavedSVG /> <span> {texts.saved}</span>
             </div>
             <div className="tagged-upper" onClick={activeTab}>
-              <TaggedSVG /> {texts.tagged}
+              <TaggedSVG /> <span> {texts.tagged}</span>
             </div>
           </div>
           <div className="posts lower">
             <div className="share-photo"></div>
-            <div className="share-photo-text">
+            <div className="share-text">
+              <span>{texts.sharePhotos}</span>
+              <span>{texts.whenYouShare}</span>
+              <span>{texts.shareFirstPhoto}</span>
+            </div>
+          </div>
+          <div className="feed lower">
+            <div className="share-photo"></div>
+            <div className="share-text">
               <span>{texts.sharePhotos}</span>
               <span>{texts.whenYouShare}</span>
               <span>{texts.shareFirstPhoto}</span>
             </div>
           </div>
           <div className="saved lower">
-            <span>{texts.onlyYouCanSee}</span>
-            <div className="saved-posts"></div>
-            <span>{texts.newCollection}</span>
+            <div className="pc-saved">
+              <div className="pc-saved-text">
+                <span>{texts.onlyYouCanSee}</span>
+                <span>{texts.newCollection}</span>
+              </div>
+              <div className="saved-posts"></div>
+            </div>
+            <div className="mobile-saved">
+              <span>{texts.onlyYouCanSee}</span>
+              <div className="saved-photo"></div>
+              <div className="mobile-saved-text">
+                <span>{texts.save}</span>
+                <span>{texts.savePhotosAndVideos}</span>
+              </div>
+              <div className="saved-posts"></div>
+            </div>
           </div>
           <div className="tagged lower">
             <div className="photos-of-you"></div>
