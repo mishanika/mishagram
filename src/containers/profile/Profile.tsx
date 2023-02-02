@@ -11,6 +11,7 @@ import { IFooter } from '../login/types';
 import { textsFooter } from '../../constants/textsLoginFooter';
 import { textsMain } from '../../constants/textsLoginMain';
 import { TabStates } from './types';
+import DiscoverPeopleSVG from '../../assets/svg/DiscoverPeopleSVG';
 
 const Profile = () => {
   const renderFooter = ({ text, url }: IFooter) => (
@@ -49,6 +50,13 @@ const Profile = () => {
 
   return (
     <main className="profile-main-section">
+      <header className="header">
+        <div className="settings">
+          <SettingsSVG />
+        </div>
+        <div className="nickname-header">mishanika2</div>
+        <DiscoverPeopleSVG />
+      </header>
       <div className="upper-part">
         <div className="profile-wrapper">
           <div className="profile-photo-wrapper">

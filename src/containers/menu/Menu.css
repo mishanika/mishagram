@@ -94,7 +94,7 @@ a{
     box-sizing: border-box;
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1600px) {
+@media screen and (min-width: 1201px) and (max-width: 1600px) {
     .menu{
         width: 250px;
     }
@@ -102,7 +102,7 @@ a{
         width: 250px;
     }
 }
-@media screen and (min-width: 1024px) and (max-width: 1199px) {
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
     .menu {
         width: 75px;
     }
@@ -117,7 +117,7 @@ a{
         width: 75px;
     }
 }
-@media screen and (min-width: 769px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
     .menu {
         width: 75px;
     }
@@ -135,7 +135,7 @@ a{
         width: 75px;
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .App{
         flex-direction: column-reverse;
     }
