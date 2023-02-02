@@ -117,7 +117,25 @@ a{
         width: 75px;
     }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+    .menu {
+        width: 75px;
+    }
+
+    .menu span {
+        display: none;
+    }
+
+    .navigation {
+        align-items: center;
+        padding: 0 15px;
+    }
+
+    .indent {
+        width: 75px;
+    }
+}
+@media screen and (max-width: 768px) {
     .App{
         flex-direction: column-reverse;
     }
