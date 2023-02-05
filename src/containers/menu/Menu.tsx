@@ -27,7 +27,7 @@ const Menu = () => {
     profile: false,
     more: false,
   });
-
+  /* eslint-disable no-prototype-builtins */
   const activeTab = (e: any) => {
     const tar = Object.prototype.hasOwnProperty.call(activateTab, e.target.classList[0])
       ? e.target.classList[0]

@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom';
 
 const Login = () => {
   const renderFooter = ({ text, url }: IFooter) => (
-    <div className="footer-element" onClick={() => window.open(url)}>
+    <div className="footer-element" onClick={() => window.open(url)} key={url}>
       <a href="#" className="footer-a">
         {text}
       </a>
