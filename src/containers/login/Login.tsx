@@ -60,7 +60,7 @@ const Login = () => {
                 <form action="" id="login-form" className="login-form">
                   <input
                     type="text"
-                    className="nickname input-field"
+                    className="nickname-login input-field"
                     id="nickname"
                     placeholder="Phone number, username or email adress"
                   />
@@ -103,7 +103,7 @@ const Login = () => {
         </div>
       </main>
 
-      <footer className="footer">
+      <footer className="footer-login">
         <div className="footer-upper">{textsFooter.map(renderFooter)}</div>
         <div className="footer-lower">
           <div className="language">{textsMain.language} (UK)</div>

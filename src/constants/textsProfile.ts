@@ -1,0 +1,20 @@
+export const texts = {
+  edit: 'Edit Profile',
+  posts: 'posts',
+  followers: 'followers',
+  following: 'following',
+  new: 'New',
+  saved: 'SAVED',
+  postS: 'POSTS',
+  tagged: 'TAGGED',
+  sharePhotos: 'Share photos',
+  whenYouShare: 'When you share photos, they will appear on your profile.',
+  shareFirstPhoto: 'Share your first photo',
+  onlyYouCanSee: "Only you can see what you've saved",
+  newCollection: '+ New Collection',
+  photosOfYou: 'Photos of you',
+  whenPeopleTagYou: "When people tag you in photos, they'll appear here.",
+  save: 'Save',
+  savePhotosAndVideos:
+    "Save photos and videos that you want to see again. No one is notified, and only you can see what you've saved.",
+};
