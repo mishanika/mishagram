@@ -24,14 +24,14 @@
     "typescript": "^4.9.3"
   },
   "lint-staged": {
-    "src/**/*.{tsx,ts}": "prettier --write",
-    "src/**/*.tsx": "eslint"
+    "src/**/*.{tsx,ts}": "prettier --write --fix",
+    "src/**/*.tsx": "eslint --fix"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "lint": "eslint --ext .js,.ts,.jsx,.tsx src --fix",
+    "lint": "eslint --ext .js,.ts,.jsx,.tsx src",
     "format": "yarn run lint --fix & yarn prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
     "prepare": "husky install"
   },

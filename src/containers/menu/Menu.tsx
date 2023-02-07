@@ -13,6 +13,9 @@ import MessengerSVG from '../../assets/svg/MessengerSVG';
 import NotificationsSVG from '../../assets/svg/NotificationsSVG';
 import NewPostSVG from '../../assets/svg/NewPostSVG';
 import MoreSVG from '../../assets/svg/MoreSVG';
+import SearchPanel from './panels/searchPanel/SearchPanel';
+import NotificationPanel from './panels/notificationPanel/NotificationPanel';
+import CreatePanel from './panels/createPanel/CreatePanel';
 
 const Menu = () => {
   const [activateTab, setActive] = useState<MenuStates>({
@@ -84,6 +87,7 @@ const Menu = () => {
       }
     }
   };
+  //const create;
   /* eslint-disable no-prototype-builtins */
   const activeTab = (e: any) => {
     const tar = Object.prototype.hasOwnProperty.call(activateTab, e.target.classList[0])
@@ -186,24 +190,10 @@ const Menu = () => {
         </div>
       </div>
       <div className="retractable-panels">
-        <div className="search-block">
-          <div className="search-upper-part"></div>
-          <span>{texts.search}</span>
-          <input type="text" />
-          <div className="search-lower-part">
-            <div className="recent-clearAll">
-              <span>{texts.recent}</span>
-              <span>{texts.clearAll}</span>
-            </div>
-            <div className="found-people">
-              <div className="person">
-                <div className="search-photo"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="notifications-block"></div>
+        <SearchPanel />
+        <NotificationPanel />
       </div>
+      <CreatePanel />
       <Outlet />
     </>
   );

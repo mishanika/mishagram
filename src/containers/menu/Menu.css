@@ -112,10 +112,6 @@ a {
   left: -401px;
   transition: 0.4s all ease;
 }
-.search-notification-wrapper {
-}
-.notification-block {
-}
 .menuChanged {
   width: 75px;
   border-right: 1px solid rgb(115, 115, 115, 0.25);
@@ -124,7 +120,8 @@ a {
   display: none;
 }
 .radiusedBorder {
-  border: 1px solid rgb(115, 115, 115, 0.5);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 50%;
 }
 .clickHandler {
   width: calc(100vw - 475px);

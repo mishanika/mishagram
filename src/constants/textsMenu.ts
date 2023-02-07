@@ -10,4 +10,7 @@ export const texts = {
   more: 'More',
   recent: 'Recent',
   clearAll: 'Clear All',
+  createNewPost: 'Create new post',
+  dragPhotosAndVideosHere: 'Drag photos and videos here',
+  selectFromComputer: 'Select From Computer',
 };
