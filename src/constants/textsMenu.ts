@@ -8,4 +8,6 @@ export const texts = {
   create: 'Create',
   profile: 'Profile',
   more: 'More',
+  recent: 'Recent',
+  clearAll: 'Clear All',
 };

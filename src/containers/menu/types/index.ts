@@ -1,5 +1,4 @@
 export interface MenuStates {
-  logo: boolean;
   home: boolean;
   search: boolean;
   explore: boolean;

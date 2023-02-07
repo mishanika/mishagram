@@ -31,7 +31,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "lint": "eslint --ext .js,.ts,.jsx,.tsx src",
+    "lint": "eslint --ext .js,.ts,.jsx,.tsx src --fix",
     "format": "yarn run lint --fix & yarn prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
     "prepare": "husky install"
   },

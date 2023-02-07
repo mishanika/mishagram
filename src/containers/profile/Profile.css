@@ -9,6 +9,7 @@
   justify-content: flex-start;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   overflow-y: auto;
+  padding: 0 0 0 325px;
 }
 .header {
   display: none;
@@ -138,10 +139,6 @@
   padding: 20px 0 0 0;
   cursor: pointer;
 }
-.posts-upper {
-  color: #fff;
-  border-top: 1px solid #fff;
-}
 .share-photo {
   width: 62px;
   height: 62px;
@@ -155,7 +152,7 @@
 }
 .posts {
   width: 100%;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
 }
@@ -352,19 +349,32 @@
 .description {
   font-size: 14px;
 }
+.activeTop {
+  color: #fff;
+  border-top: 1px solid #fff;
+}
+.activeTop > svg {
+  color: #fff;
+}
+.activeBottom {
+  display: flex;
+}
 @media screen and (min-width: 1200px) and (max-width: 1600px) {
   .profile-main-section {
     width: calc(100vw - 250px);
+    padding: 0 0 0 250px;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1199px) {
   .profile-main-section {
     width: calc(100vw - 75px);
+    padding: 0 0 0 75px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .profile-main-section {
     width: calc(100vw - 75px);
+    padding: 0 0 0 75px;
   }
 
   .upper-part {
@@ -378,6 +388,7 @@
 @media screen and (min-width: 650px) and (max-width: 767px) {
   .profile-main-section {
     width: 100vw;
+    padding: 0 0 60px 0;
   }
 
   .header {
@@ -428,6 +439,10 @@
   .saved-posts {
     order: 1;
   }
+
+  .retractable-panels {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 649px) {
@@ -438,6 +453,7 @@
   .profile-main-section {
     width: 100vw;
     background: #000;
+    padding: 0 0 60px 0;
   }
   .upper-part {
     display: none;
@@ -472,11 +488,6 @@
   .posts-saved-tagged-inner > div > svg {
     width: 24px;
     height: 24px;
-  }
-
-  .posts-upper > svg {
-    color: #0a84f6;
-    border: none;
   }
 
   .saved {
@@ -516,10 +527,27 @@
   .footer-profile {
     display: none;
   }
+
+  .activeTop {
+    color: #0a84f6;
+    border: none;
+  }
+
+  .activeTop > svg {
+    color: #0a84f6;
+  }
+
+  .retractable-panels {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 400px) {
   .edit {
     padding: 5px 65px;
+  }
+
+  .retractable-panels {
+    display: none;
   }
 }
