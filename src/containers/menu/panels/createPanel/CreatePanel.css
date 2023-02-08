@@ -1,3 +1,73 @@
 .create-block {
   display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(0, 0, 0, 0.25);
+  z-index: 2;
+  color: #fff;
+}
+.inner-create {
+  width: 600px;
+  height: 650px;
+  background: #262626;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inner-create > span {
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+.drag-photos-and-videos {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid rgb(115, 115, 115, 0.25);
+}
+.drag-photos-and-videos > span {
+  font-size: 20px;
+  margin: 10px 0 20px 0;
+}
+.select-from-computer {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 7px 20px;
+  background: #0095f6;
+  border-radius: 8px;
+}
+.select-from-computer:hover {
+  background: #0a84f6;
+  cursor: pointer;
+}
+
+.xmark-create {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+.xmark-create:before,
+.xmark-create:after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  background: #7e7e7e;
+  border-radius: 20px;
+}
+.xmark-create:before {
+  transform: rotate(45deg);
+}
+.xmark-create:after {
+  transform: rotate(-45deg);
 }

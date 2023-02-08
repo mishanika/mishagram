@@ -1,0 +1,122 @@
+.search-block {
+  display: flex;
+  flex-direction: column;
+}
+.search-upper-part {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  border-bottom: 1px solid rgb(115, 115, 115, 0.5);
+}
+.search-upper-part > span {
+  margin: 20px 25px 20px 20px;
+}
+.search-input {
+  width: calc(100% - 40px);
+  height: 40px;
+  background: #262626;
+  border-radius: 10px;
+  margin: 20px 25px 20px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nickname-search::placeholder {
+  font-size: 16px;
+}
+.nickname-search {
+  text-indent: 15px;
+  font-family: inherit;
+}
+.xmark-input {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #c8c8c8;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.xmark-input:before,
+.xmark-input:after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 1px;
+  background: #4c4c4c;
+}
+.xmark-input:before {
+  transform: rotate(45deg);
+}
+.xmark-input:after {
+  transform: rotate(-45deg);
+}
+.recent-clearAll {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px;
+}
+.recent-clearAll > span:first-child {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+}
+.recent-clearAll > span:last-child {
+  color: #0a84f6;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.recent-clearAll > span:last-child:hover {
+  color: #fff;
+}
+.person-search {
+  display: flex;
+  align-items: center;
+  margin: 25px 25px;
+}
+.search-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 10px 0 0;
+}
+.search-nickname-description {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  flex-grow: 1;
+}
+.search-description {
+  color: #8f8f8f;
+}
+.xmark-people {
+  width: 15px;
+  height: 15px;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.xmark-people:before,
+.xmark-people:after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  background: #7e7e7e;
+  border-radius: 20px;
+}
+.xmark-people:before {
+  transform: rotate(45deg);
+}
+.xmark-people:after {
+  transform: rotate(-45deg);
+}

@@ -13,4 +13,10 @@ export const texts = {
   createNewPost: 'Create new post',
   dragPhotosAndVideosHere: 'Drag photos and videos here',
   selectFromComputer: 'Select From Computer',
+  thisWeek: 'This week',
+  earlier: 'Earlier',
+  thisMonth: 'This month',
+  startedFollowingYou: 'started following you.',
+  following: 'Following',
+  mentionedYouInAComment: 'mentioned you in a comment:',
 };

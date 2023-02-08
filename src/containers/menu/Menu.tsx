@@ -32,9 +32,21 @@ const Menu = () => {
 
   const [menuState, setMenuState] = useState(false);
 
-  const handleClick = (e: any) => {
+  const menuHandler = (e: any) => {
     activeTab(e);
     changeMenu(e);
+  };
+  const createHandler = (e: any) => {
+    activeTab(e);
+    createAppearence();
+  };
+  const createAppearence = () => {
+    const createBlock = document.querySelector('.create-block') as HTMLBaseElement;
+    if (createBlock.style.display == 'none' || createBlock.style.display == '') {
+      createBlock.style.display = 'flex';
+    } else {
+      createBlock.style.display = 'none';
+    }
   };
   const changeMenu = (e: any) => {
     const menu = document.querySelector('.menu-inner') as HTMLBaseElement;
@@ -49,7 +61,7 @@ const Menu = () => {
 
     if (!menuState) {
       div.className = 'clickHandler';
-      document.querySelector('.menu')?.append(div);
+      document.querySelector('.menu')?.after(div);
       div.onclick = () => {
         let panel = document.querySelector('.search-block') as HTMLBaseElement;
         if (panel.offsetLeft != 76) {
@@ -133,7 +145,7 @@ const Menu = () => {
             </Link>
 
             <Link to="#">
-              <div className="search" onClick={handleClick}>
+              <div className="search" onClick={menuHandler}>
                 <SearchSVG isActive={activateTab.search} />
                 <span>{texts.search}</span>
               </div>
@@ -161,14 +173,14 @@ const Menu = () => {
             </Link>
 
             <Link to="#">
-              <div className="notifications" onClick={handleClick}>
+              <div className="notifications" onClick={menuHandler}>
                 <NotificationsSVG isActive={activateTab.notifications} />
                 <span>{texts.notifications}</span>
               </div>
             </Link>
 
             <Link to="#">
-              <div className="newPost" onClick={activeTab}>
+              <div className="newPost" onClick={createHandler}>
                 <NewPostSVG isActive={activateTab.newPost} />
                 <span>{texts.create}</span>
               </div>
