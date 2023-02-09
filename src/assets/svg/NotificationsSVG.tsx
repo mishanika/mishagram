@@ -1,5 +1,5 @@
 import React from 'react';
-import { IIconOrios } from '../../types/types';
+import { IIconOrios } from './types/types';
 
 const NotificationsSVG = ({ isActive }: IIconOrios) => {
   if (isActive) {

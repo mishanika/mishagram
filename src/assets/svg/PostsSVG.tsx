@@ -2,7 +2,7 @@ import React from 'react';
 
 const PostsSVG = () => {
   return (
-    <svg aria-label="" color="#fff" fill="#fafafa" height="12" role="img" viewBox="0 0 24 24" width="12">
+    <svg aria-label="" color="#8e8e8e" fill="#fafafa" height="12" role="img" viewBox="0 0 24 24" width="12">
       <rect
         fill="none"
         height="18"

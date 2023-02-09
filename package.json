@@ -24,8 +24,8 @@
     "typescript": "^4.9.3"
   },
   "lint-staged": {
-    "src/**/*.{tsx,ts}": "prettier --write",
-    "src/**/*.tsx": "eslint"
+    "src/**/*.{tsx,ts}": "prettier --write --fix",
+    "src/**/*.tsx": "eslint --fix"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -1,7 +1,8 @@
 import React from 'react';
+import { ILogo } from './types/types';
 
-const Mishagram = () => {
-  if (window.screen.width < 1200) {
+const Mishagram = ({ logoState }: ILogo) => {
+  if (window.screen.width < 1200 || logoState) {
     return (
       <svg
         aria-label="Instagram"

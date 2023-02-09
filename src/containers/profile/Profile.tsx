@@ -33,27 +33,14 @@ const Profile = () => {
     const upperTabAnable = e.target.closest('div') as HTMLBaseElement;
     const lowerTabDisable = document.querySelector(`.${activateTab.lowerPart}`) as HTMLBaseElement;
     const lowerTabAnable = document.querySelector(`.${upperTabAnable.classList[0].split('-')[0]}`) as HTMLBaseElement;
-    const svgDisable = upperTabDisable.children[0] as HTMLBaseElement;
-    const svgAnable = upperTabAnable.children[0] as HTMLBaseElement;
-    if (window.screen.availWidth > 767) {
-      upperTabDisable.style.color = '#737373';
-      upperTabDisable.style.borderTop = 'none';
-      upperTabAnable.style.color = '#fff';
-      upperTabAnable.style.borderTop = '1px solid #fff';
-      svgAnable.style.color = '#fff';
-      svgDisable.style.color = '#737373';
-    } else {
-      upperTabDisable.style.color = '#737373';
-      upperTabDisable.style.borderTop = 'none';
-      upperTabAnable.style.color = '#0a84f6';
-      svgAnable.style.color = '#0a84f6';
-      svgDisable.style.color = '#737373';
-    }
-    lowerTabDisable.style.display = 'none';
-    lowerTabAnable.style.display = 'flex';
+
+    upperTabDisable.classList.remove('activeTop');
+    upperTabAnable.classList.add('activeTop');
+    lowerTabDisable.classList.remove('activeBottom');
+    lowerTabAnable.classList.add('activeBottom');
 
     activateTabCopy.lowerPart = lowerTabAnable.classList[0];
-    activateTabCopy.upperPart = upperTabAnable.classList.value;
+    activateTabCopy.upperPart = upperTabAnable.classList[0];
     setActive({ ...activateTabCopy });
   };
 
@@ -124,7 +111,7 @@ const Profile = () => {
       <div className="lower-part">
         <div className="posts-saved-tagged">
           <div className="posts-saved-tagged-inner">
-            <div className="posts-upper" onClick={activeTab}>
+            <div className="posts-upper activeTop" onClick={activeTab}>
               <PostsSVG /> <span>{texts.postS}</span>
             </div>
             <div className="feed-upper" onClick={activeTab}>
@@ -137,7 +124,7 @@ const Profile = () => {
               <TaggedSVG /> <span> {texts.tagged}</span>
             </div>
           </div>
-          <div className="posts lower">
+          <div className="posts lower activeBottom">
             <div className="share-photo"></div>
             <div className="share-text">
               <span>{texts.sharePhotos}</span>
