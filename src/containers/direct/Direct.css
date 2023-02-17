@@ -44,14 +44,9 @@
     cursor: pointer;
 }
 
-.other-users-panel {
-    height: 100vh;
-}
+.other-users-panel {}
 
-.scroll-container {
-    overflow-y: scroll;
-    overflow-anchor: none;
-}
+.scroll-container {}
 
 .message-panel {
     flex-grow: 3;
