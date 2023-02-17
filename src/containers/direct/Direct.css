@@ -1,0 +1,67 @@
+.main-container {
+    flex-grow: 1;
+    height: 100vh;
+    background: #121212;
+}
+
+.direct-container {
+    margin: 20px auto;
+    max-width: 935px;
+    height: 95vh;
+    background-color: #000;
+    border: 1px solid #363636;
+    border-radius: 0.5%;
+    display: flex;
+    flex-direction: row;
+}
+
+.users-panel {
+    flex-grow: 1;
+    margin: 0 auto;
+    color: #fff;
+
+}
+
+.user-panel {
+    border-bottom: 1px solid #363636;
+    border-right: 1px solid #363636;
+    height: 40px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 60px;
+    cursor: pointer;
+}
+
+.user-panel button {
+    outline: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.other-users-panel {}
+
+.scroll-container {}
+
+.message-panel {
+    flex-grow: 3;
+}
+
+.chevron-down {
+    fill: white;
+}
+
+.user-name, .new-message {
+    margin-left: auto;
+}
+
+button>span {
+    padding: 4px;
+    vertical-align: middle;
+    display: inline-block;
+}
