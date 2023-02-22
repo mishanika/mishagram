@@ -1,23 +1,22 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
-import './Direct.css';
-import { useAppSelector } from '../../hooks/hooks';
-import { selectName } from '../../redux/reducers/app.slice';
+import React from 'react';
+import './Message.css';
+import { useAppSelector } from '../../hooks/useReduxHooks';
 import ChevronDownSVG from '../../assets/svg/ChevronDownSVG';
 import NewDirectMessageSVG from '../../assets/svg/NewDirectMessageSVG';
 import { makeStyles } from '@mui/styles';
 import { Button, Stack } from '@mui/material';
-import MessageList from './MessageList';
-import { store } from '../../redux/store';
+import DialogList from './components/dialogList/DialogList';
+import { selectDialogs } from '../../redux/reducers/direct..slice';
 
 const useStyles = makeStyles({
   btn: {},
 });
 
-const Direct = () => {
-  const [message, setMessage] = useState(store.getState());
+const Message = () => {
   const classes = useStyles();
-  const name = useAppSelector(selectName);
+
+  const dialogs = useAppSelector(selectDialogs);
 
   return (
     <div className="main-container">
@@ -26,7 +25,7 @@ const Direct = () => {
           <div className="user-panel">
             <div className="user-name">
               <button>
-                <span>{name}</span>
+                <span>{dialogs[0].senderName}</span>
                 <span>
                   <ChevronDownSVG />
                 </span>
@@ -39,7 +38,7 @@ const Direct = () => {
             </div>
           </div>
           <div className="other-users-panel scroll-container">
-            <MessageList key={message.app.id} {...message.app} />
+            <DialogList dialogs={dialogs} />
           </div>
         </div>
         <div className="message-panel">
@@ -52,4 +51,4 @@ const Direct = () => {
   );
 };
 
-export default Direct;
+export default Message;
