@@ -1,0 +1,98 @@
+.explore-main-section {
+  width: calc(100vw - 325px);
+  height: 100vh;
+  background: #121212;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  padding: 0 0 0 325px;
+  transition: all ease 0.5s;
+}
+.media-wrapper {
+  max-width: 963px;
+  padding: 40px 0 0 20px;
+  width: calc(100% - 40px);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.right-fullHeightBlock {
+  display: flex;
+}
+.left-fullHeightBlock {
+  display: flex;
+}
+.right-fullHeightBlock > img,
+.left-fullHeightBlock > img {
+  width: calc(33.3333% - 28px);
+  height: calc(100% - 28px);
+  margin: 0 28px 28px 0;
+}
+.right-fullHeightBlock > img {
+  order: 1;
+}
+.left-fullHeightBlock > div > div {
+  justify-content: flex-end;
+}
+.fourElements-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.fourElements-innerWrapper > img {
+  width: calc(50% - 28px);
+  margin: 0 28px 28px 0;
+}
+.fourElements-innerWrapper {
+  display: flex;
+}
+.explore-main-section > div:first-child {
+  display: none;
+}
+.input-svg {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 25px;
+}
+.input-svg svg {
+  width: 16px;
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .explore-main-section {
+    width: calc(100vw - 75px);
+    padding: 0 0 0 75px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .explore-main-section {
+    width: calc(100vw - 75px);
+    padding: 0 0 0 75px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .explore-main-section > div:first-child {
+    display: flex;
+    padding: 15px 0;
+    margin: 20px 0 0 0;
+  }
+  .media-wrapper {
+    width: 100%;
+    padding: 0;
+    margin: 20px;
+  }
+  .explore-main-section {
+    width: 100vw;
+    height: calc(100vh - 60px);
+    padding: 0 0 60px 0;
+  }
+  .right-fullHeightBlock > img,
+  .left-fullHeightBlock > img {
+    width: calc(33.3333% - 1px);
+    height: calc(100% - 1px);
+    margin: 0 1px 1px 0;
+  }
+  .fourElements-innerWrapper > img {
+    width: calc(50% - 1px);
+    margin: 0 1px 1px 0;
+  }
+}

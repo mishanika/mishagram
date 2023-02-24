@@ -15,6 +15,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.0",
+    "node-sass": "^7.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
@@ -24,7 +25,7 @@
     "typescript": "^4.9.3"
   },
   "lint-staged": {
-    "src/**/*.{tsx,ts}": "prettier --write --fix",
+    "src/**/*.{tsx,ts}": "prettier --write",
     "src/**/*.tsx": "eslint --fix"
   },
   "scripts": {
@@ -55,6 +56,7 @@
   },
   "devDependencies": {
     "eslint-config-prettier": "^8.5.0",
-    "husky": "^8.0.0"
+    "husky": "^8.0.0",
+    "sass": "^1.58.0"
   }
 }
