@@ -8,7 +8,16 @@ export interface initialState {
 }
 
 const initialState: initialState = {
-  dialogs: [{ id: '1', senderAvatar: '', senderName: 'шо', lastMessage: 'hello world', messageSent: '1h' }],
+  dialogs: [
+    {
+      id: '1',
+      senderAvatar: '',
+      senderName: 'шо',
+      lastMessage: 'hello world',
+      messageSent: '1h',
+    },
+    { id: '2', senderAvatar: '', senderName: 'Messages', lastMessage: 'Messages', messageSent: '2h' },
+  ],
   messages: [],
 };
 

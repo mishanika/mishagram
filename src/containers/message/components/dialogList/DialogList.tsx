@@ -6,11 +6,11 @@ const DialogList = ({ dialogs }: DialogListProps) => {
   const renderDialogs = () => {
     return dialogs.map((dialog) => (
       <>
-        <Dialog key={dialog.id} />
+        <Dialog key={dialog.id} {...dialog} />
       </>
     ));
   };
-  return <div>{renderDialogs()}</div>;
+  return <>{renderDialogs()}</>;
 };
 
 export default DialogList;

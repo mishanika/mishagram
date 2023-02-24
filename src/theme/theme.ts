@@ -3,14 +3,29 @@ import { createTheme } from '@mui/material/styles';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#588a54',
+      main: '#fff',
     },
     secondary: {
-      main: '#f9f9f9',
+      main: '#949494',
+    },
+    action: {
+      hover: '#262626',
     },
   },
   typography: {
-    fontSize: 43,
+    fontFamily: [
+      '-apple-system',
+      'BlinkMacSystemFont',
+      '"Segoe UI"',
+      'Roboto',
+      '"Helvetica"',
+      'Arial',
+      'sans-serif',
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(','),
+    fontSize: 20,
   },
   components: {},
 });
